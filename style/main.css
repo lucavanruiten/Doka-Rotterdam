@@ -142,7 +142,7 @@ body, html {
 
 #booking_image_frame {
     flex: 1;
-    background-image: url("../images/rik\ images\ doka\ \(clean\)/1.png");
+    background-image: url("../images/doka_img/1.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
