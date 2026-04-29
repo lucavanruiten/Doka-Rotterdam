@@ -216,6 +216,7 @@ body, html {
     align-items: center;
     gap: 50px;
     z-index: 1;
+    min-height: 100vh;
 }
 
 .team_card {
@@ -480,6 +481,20 @@ body, html {
         max-width: 100%;
         width: 100%;
     }
+    .team_card {
+        width: 100%;
+    }
+    .team_image {
+        width: 120px;
+    }
+    #team_container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    flex-direction: column;
+    gap: 50px;
+    z-index: 1;
+    min-height: 100vh;
+}
 
 
 
