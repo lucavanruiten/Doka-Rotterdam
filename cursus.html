@@ -116,11 +116,39 @@
             font-size: 1em;
         }
 
+        .cursus-photo {
+            flex: 0 0 100%;
+            max-width: 700px;
+            margin: 0 25px 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 420px;
+        }
+
+        .cursus-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: saturate(0.15) contrast(1.1);
+            transition: filter 0.4s ease;
+        }
+
+        .cursus-photo img:hover {
+            filter: saturate(1) contrast(1);
+        }
+
         /* ── Responsive tweaks ─────────────────────────────────────────── */
         @media (max-width: 700px) {
             .timeline-time {
                 flex: 0 0 80px;
                 font-size: 0.85em;
+            }
+            .cursus-photo {
+                max-width: 100%;
+                height: 260px;
+                margin: 0 0 0 0;
+                filter: saturate(1) contrast(1);
             }
         }
     </style>
@@ -148,10 +176,14 @@
         <div class="text_box_imp">
             <p>
                 <h1><b>Van camera tot donkere kamer</b></h1><br>
-                In deze kleinschalige cursus <em>slow photography</em> bij <b>Studio Rik Versteeg in Rotterdam</b> leer je niet alleen hoe je werkt in de <b>donkere kamer</b>, maar ook de basis van analoge fotografie zelf. Van het maken van een analoog portret in de fotostudio tot het ontwikkelen en afdrukken van je eigen werk: je doorloopt het volledige analoge proces.<br><br>
+                In deze kleinschalige cursus <em>slow photography</em> bij <b>Studio Rik Versteeg in Rotterdam</b> leer je niet alleen hoe je werkt in de <b>donkere kamer</b>, maar ook de basis van analoge fotografie zelf. Van het maken van je eerste analoog portret in de fotostudio tot het ontwikkelen en afdrukken van je eigen werk: je doorloopt het volledige analoge proces.<br><br>
                 Je werkt in een kleine groep van maximaal <b>4 deelnemers</b>, waardoor er veel ruimte is voor persoonlijke begeleiding en aandacht voor jouw ontwikkeling.<br><br>
-                Tijdens de cursus fotograferen deelnemers elkaar — zo leer je niet alleen de techniek, maar ook hoe je werkt met licht, een lichtmeter, iso-instellingen, diafragma, compositie en het vastleggen van een persoon. Tussen de sessies is er ruimte om te pauzeren en ervaringen uit te wisselen. <b>Een verzorgde lunch is inbegrepen.</b>
+                Tijdens de cursus fotograferen deelnemers elkaar — zo leer je niet alleen de techniek, maar ook hoe je werkt met licht, een lichtmeter, iso-instellingen, diafragma, compositie en het vastleggen van een model. Tussen de sessies is er ruimte om te pauzeren en ervaringen uit te wisselen. <b>Een verzorgde lunch is inbegrepen.</b>
             </p>
+        </div>
+
+        <div class="cursus-photo">
+            <img src="images/cursus_photos/1.jpg" alt="Cursus analoge fotografie">
         </div>
 
         <!-- What you'll learn -->
@@ -177,7 +209,7 @@
                 <li>
                     <span class="timeline-time">09:00 – 12:00</span>
                     <div class="timeline-body">
-                        <strong>📸 Fotografie, filmontwikkeling & drogen</strong>
+                        <strong>📸 Fotografie, filmontwikkeling & film drogen</strong>
                         <p>Introductie in de basis van analoge fotografie. Daarna fotografeer je elkaar met analoge camera's, ontwikkel je je eigen zwart-wit film in de doka, en terwijl de film droogt, bereiden we het tweede deel van de dag voor.</p>
                     </div>
                 </li>
@@ -203,6 +235,10 @@
                     </div>
                 </li>
             </ul>
+        </div>
+
+        <div class="cursus-photo">
+            <img src="images/cursus_photos/2.jpg" alt="Werken in de donkere kamer">
         </div>
 
         <!-- For whom -->
@@ -234,7 +270,7 @@
         <div class="text_box_imp">
             <p>
                 <h1><b>Praktische informatie</b></h1><br>
-                <b>Locatie:</b> Studio Rik Versteeg, Rotterdam<br>
+                <b>Locatie:</b> Studio Rik Versteeg, Rotterdam (Hildegardisstraat 15 · 3036 NS Rotterdam)<br>
                 <b>Groepsgrootte:</b> maximaal 4 personen<br>
                 <b>Inclusief:</b> introductie, begeleiding, lunch en alle materialen<br>
                 <b>Fotografie:</b> uitsluitend zwart-wit<br><br>
