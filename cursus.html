@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="NL-nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursus – Doka Rotterdam</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ── Page-specific additions for cursus.html ───────────────────── */
+
+        #menu_cursus {
+            position: fixed;
+        }
+
+        #menu_cursus a {
+            background-color: rgb(255, 0, 149);
+            border: none;
+        }
+
+        #menu_cursus a:hover {
+            background-color: rgb(9, 52, 150);
+            color: rgb(255, 0, 149);
+        }
+
+        /* Blurred backdrop – reuses the same pattern as other pages */
+        #backdrop_cursus {
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('images/doka_img/compressed/8.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+            filter: saturate(0) blur(20px) brightness(0.4);
+        }
+
+        /* ── Schedule timeline ─────────────────────────────────────────── */
+        .timeline {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .timeline li {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 22px;
+            align-items: flex-start;
+        }
+
+        .timeline-time {
+            flex: 0 0 110px;
+            font-weight: 700;
+            color: rgb(255, 0, 149);
+            font-size: 1em;
+            padding-top: 2px;
+            white-space: nowrap;
+        }
+
+        .timeline-body {
+            flex: 1;
+        }
+
+        .timeline-body strong {
+            display: block;
+            font-size: 1em;
+            margin-bottom: 4px;
+        }
+
+        .timeline-body p {
+            font-size: 0.95em !important;
+            opacity: 0.85;
+            margin: 0;
+        }
+
+        /* ── "Meld je aan" CTA button ──────────────────────────────────── */
+        .cta-btn {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 12px 28px;
+            background-color: rgb(255, 0, 149);
+            color: white;
+            font-family: "Sora", sans-serif;
+            font-weight: 700;
+            font-size: 1.1em;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+        }
+
+        .cta-btn:hover {
+            background-color: rgb(9, 52, 150);
+            color: rgb(255, 0, 149);
+        }
+
+        /* ── List styling inside text boxes ────────────────────────────── */
+        .text_box_imp ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .text_box_imp ul li::before {
+            content: "— ";
+            color: rgb(255, 0, 149);
+            font-weight: 700;
+        }
+
+        .text_box_imp ul li {
+            margin-bottom: 6px;
+            font-size: 1em;
+        }
+
+        /* ── Responsive tweaks ─────────────────────────────────────────── */
+        @media (max-width: 700px) {
+            .timeline-time {
+                flex: 0 0 80px;
+                font-size: 0.85em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <div class="menu" id="menu_cursus">
+        <a href="index.html">HOME</a>
+        <a href="impression.html">DOKA</a>
+        <a href="cursus.html">CURSUS</a>
+        <a href="reserveren.html">RESERVEREN</a>
+        <a href="team.html">TEAM</a>
+    </div>
+
+    <!-- Blurred background -->
+    <div id="backdrop_cursus"></div>
+
+    <!-- Main content -->
+    <div id="text_frame_booking">
+
+        <h1 style="color: rgb(255, 0, 149);">Cursus</h1>
+
+        <!-- Intro -->
+        <div class="text_box_imp">
+            <p>
+                <h1><b>Van camera tot donkere kamer</b></h1><br>
+                In deze kleinschalige cursus <em>slow photography</em> bij <b>Studio Rik Versteeg in Rotterdam</b> leer je niet alleen hoe je werkt in de <b>donkere kamer</b>, maar ook de basis van analoge fotografie zelf. Van het maken van een analoog portret in de fotostudio tot het ontwikkelen en afdrukken van je eigen werk: je doorloopt het volledige analoge proces.<br><br>
+                Je werkt in een kleine groep van maximaal <b>4 deelnemers</b>, waardoor er veel ruimte is voor persoonlijke begeleiding en aandacht voor jouw ontwikkeling.<br><br>
+                Tijdens de cursus fotograferen deelnemers elkaar — zo leer je niet alleen de techniek, maar ook hoe je werkt met licht, een lichtmeter, iso-instellingen, diafragma, compositie en het vastleggen van een persoon. Tussen de sessies is er ruimte om te pauzeren en ervaringen uit te wisselen. <b>Een verzorgde lunch is inbegrepen.</b>
+            </p>
+        </div>
+
+        <!-- What you'll learn -->
+        <div class="text_box_imp">
+            <p>
+                <h1><b>Wat ga je leren?</b></h1><br>
+            </p>
+            <ul>
+                <li>Basisprincipes van studiofotografie (instellingen, compositie, belichting)</li>
+                <li>Werken met een analoge Hasselblad camera</li>
+                <li>Elkaar fotograferen — portret en experiment</li>
+                <li>Meekijken bij het ontwikkelen van 120 film in de doka</li>
+                <li>Werken in de donkere kamer</li>
+                <li>Afdrukken maken met een vergroter</li>
+                <li>Werken met contrast, teststrips en beeldselectie</li>
+            </ul>
+        </div>
+
+        <!-- Schedule -->
+        <div class="text_box_imp">
+            <p><h1><b>Programma van de dag</b></h1><br></p>
+            <ul class="timeline">
+                <li>
+                    <span class="timeline-time">09:00 – 12:00</span>
+                    <div class="timeline-body">
+                        <strong>📸 Fotografie, filmontwikkeling & drogen</strong>
+                        <p>Introductie in de basis van analoge fotografie. Daarna fotografeer je elkaar met analoge camera's, ontwikkel je je eigen zwart-wit film in de doka, en terwijl de film droogt, bereiden we het tweede deel van de dag voor.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="timeline-time">12:00 – 13:00</span>
+                    <div class="timeline-body">
+                        <strong>🍽️ Lunch & reflectiemoment</strong>
+                        <p>Een gezamenlijke, verzorgde lunch. We bespreken ervaringen, analyseren beelden en beantwoorden vragen over het proces tot nu toe.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="timeline-time">13:00 – 17:00</span>
+                    <div class="timeline-body">
+                        <strong>🧪 Afdrukken in de donkere kamer</strong>
+                        <p>Je leert hoe je een negatief omzet naar een analoge zwart-wit print met een vergroter. Contactsheet, belichtingstijden, tegenhouden en doordrukken, contrast en compositie — alles om jouw foto's perfect af te drukken.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="timeline-time">17:00 – 17:30</span>
+                    <div class="timeline-body">
+                        <strong>🥂 Afsluiting</strong>
+                        <p>We sluiten ontspannen af met een drankje, bekijken het gemaakte werk en delen resultaten. Je neemt je eigen print mee naar huis.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- For whom -->
+        <div class="text_box_imp">
+            <p><h1><b>Voor wie is deze cursus?</b></h1><br></p>
+            <ul>
+                <li>Beginners die willen starten met analoge fotografie</li>
+                <li>Creatieven die meer willen leren over portretfotografie</li>
+                <li>Fotografen die hun proces willen verdiepen</li>
+                <li>Iedereen die wil werken in een donkere kamer in Rotterdam</li>
+            </ul>
+        </div>
+
+        <!-- Why this course -->
+        <div class="text_box_imp">
+            <p><h1><b>Waarom deze cursus?</b></h1><br></p>
+            <ul>
+                <li>Kleine groep — max. 4 personen</li>
+                <li>Persoonlijke en artistieke begeleiding</li>
+                <li>Combinatie van fotograferen en doka-werk</li>
+                <li>Inclusief lunch</li>
+                <li>Hands-on: van opname tot eindprint, die je mee naar huis neemt</li>
+                <li>Alleen zwart-wit fotografie — volledig analoog</li>
+                <li>Alle benodigde materialen inbegrepen</li>
+            </ul>
+        </div>
+
+        <!-- Practical info + CTA -->
+        <div class="text_box_imp">
+            <p>
+                <h1><b>Praktische informatie</b></h1><br>
+                <b>Locatie:</b> Studio Rik Versteeg, Rotterdam<br>
+                <b>Groepsgrootte:</b> maximaal 4 personen<br>
+                <b>Inclusief:</b> introductie, begeleiding, lunch en alle materialen<br>
+                <b>Fotografie:</b> uitsluitend zwart-wit<br><br>
+                Wil je de volledige magie van analoge fotografie ervaren? Schrijf je in en ontdek hoe jouw beelden tot leven komen — van camera tot print.
+            </p>
+            <a class="cta-btn" href="https://www.eventbrite.nl/e/tickets-cursus-analoge-fotografie-doka-printen-1988477732426" target="_blank">Meld je aan</a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <p>&copy; 2026 Doka Rotterdam. Alle rechten voorbehouden.</p>
+        <a href="https://maps.app.goo.gl/UmLGHMcnTGEYaz4e9" target="_blank">
+            <p>Hildegardisstraat 15 · 3036 NS Rotterdam · Nederland</p>
+        </a>
+        <p><a href="terms.html" target="_blank">Algemene Voorwaarden</a></p>
+        <p><a href="contact.html">Contact</a></p>
+    </div>
+
+</body>
+</html>
