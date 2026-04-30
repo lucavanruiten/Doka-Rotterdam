@@ -97,9 +97,15 @@ body, html {
     z-index: 4;
     font-size: 3em;
     font-weight: 800;
+    mix-blend-mode: exclusion;
     font-family: "Sora", sans-serif;
     color: rgb(255, 0, 149);
-    mix-blend-mode: difference;
+}
+
+#header > img {
+    z-index: 10;
+    width: 80vw;
+    max-width: 650px;
 }
 
 #overlay {
@@ -141,7 +147,6 @@ body, html {
 #footer a{
     color: white;
     text-decoration: none;
-    border: dotted white 1px;
 }
 
 #footer a:hover {
