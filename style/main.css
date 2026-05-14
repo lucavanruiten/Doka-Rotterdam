@@ -341,6 +341,41 @@ body, html {
     color: white;
 }
 
+.review {
+    background-color: rgb(255, 0, 149);
+    color: white;
+    padding: 25px;
+    border-radius: 25px;
+    z-index: 10;
+    max-width: 400px;
+    height: fit-content;
+    font-size: 1.1em;
+    font-family: "Sora", sans-serif;
+    line-height: 1.6;
+    border: 3px solid white;
+    flex: 1 1 250px;
+}
+
+.review p::after {
+    content: '';
+    display: block;
+    margin-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+#reviews {
+    position: relative;
+    width: 100%;
+    min-height: fit-content;
+    padding: 50px 50px 120px 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+}
+
 /* grid code */
 
 
@@ -535,6 +570,18 @@ body, html {
 }
 
 
+
+    #reviews {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px 15px 100px 15px;
+        gap: 20px;
+    }
+
+    .review {
+        max-width: 100%;
+        font-size: 0.95em;
+    }
 
     #gallery {
         grid-template-columns: repeat(8, 1fr);
