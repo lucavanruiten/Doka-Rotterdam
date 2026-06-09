@@ -382,7 +382,7 @@ body, html {
 #gallery {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(21, 15vh);
+  grid-template-rows: repeat(26, 15vh);
   grid-gap: 1.5rem;
   background-color: white;
   padding: 1.5rem;
@@ -433,65 +433,42 @@ body, html {
   grid-column-end: 5;
   grid-row-start: 6;
   grid-row-end: 12;
-
-  /** Alternative Syntax **/
-  /* grid-column: 1 / span 4;  */
-  /* grid-row: 3 / span 3; */
 }
 
 .gallery__item--5 {
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 12;
-  grid-row-end: 16;
-
-  /** Alternative Syntax **/
-  /* grid-column: 1 / span 4; */
-  /* grid-row: 6 / span 3; */
-}
-
-.gallery__item--6 {
-  grid-column-start: 5;
-  grid-column-end: 9;
-  grid-row-start: 6;
-  grid-row-end: 12;
-
-  /** Alternative Syntax **/
-  /* grid-column: 5 / span 4; */
-  /* grid-row: 6 / span 3; */
+  grid-row-end: 17;
 }
 
 .gallery__item--7 {
   grid-column-start: 5;
-  grid-column-end: 9;
+  grid-column-end: 8;
   grid-row-start: 12;
-  grid-row-end: 16;
+  grid-row-end: 17;
+}
 
-  /** Alternative Syntax **/
-  /* grid-column: 5 / span 4; */
-  /* grid-row: 6 / span 3; */
+/* New vertical item in the middle section */
+.gallery__item--10 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 17;
 }
 
 .gallery__item--8 {
   grid-column-start: 1;
   grid-column-end: 6;
-  grid-row-start: 16;
-  grid-row-end: 21;
-
-  /** Alternative Syntax **/
-  /* grid-column: 5 / span 4; */
-  /* grid-row: 6 / span 3; */
+  grid-row-start: 17;
+  grid-row-end: 22;
 }
 
 .gallery__item--9 {
   grid-column-start: 6;
   grid-column-end: 9;
-  grid-row-start: 16;
-  grid-row-end: 21;
-
-  /** Alternative Syntax **/
-  /* grid-column: 5 / span 4; */
-  /* grid-row: 6 / span 3; */
+  grid-row-start: 17;
+  grid-row-end: 22;
 }
 
 @keyframes scroll {
@@ -585,7 +562,7 @@ body, html {
 
     #gallery {
         grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(54, 15vh);
+        grid-template-rows: repeat(60, 15vh);
     }
 
 
@@ -642,5 +619,11 @@ body, html {
         grid-column-end: 9;
         grid-row-start: 48;
         grid-row-end: 54;
+    }
+    .gallery__item--10 {
+        grid-column-start: 1;
+        grid-column-end: 9;
+        grid-row-start: 54;
+        grid-row-end: 60;
     }
 }
