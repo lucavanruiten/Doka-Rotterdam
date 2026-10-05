@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="images/logo/logo_icon.png">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="icon" type="image/png" href="images/logo/logo_icon.png">
+    <script src="script/main.js" defer></script>
 
     <!-- ── Primary SEO ────────────────────────────────────────────────── -->
     <title>Cursus Analoge Fotografie & Donkere Kamer Rotterdam | Doka Rotterdam</title>
@@ -15,17 +16,18 @@
     <meta name="keywords" content="cursus analoge fotografie Rotterdam, donkere kamer cursus Rotterdam, doka cursus, zwart-wit fotografie workshop, analoog fotograferen leren, film ontwikkelen Rotterdam, fotografie workshop Rotterdam">
     <meta name="author" content="Studio Rik Versteeg">
     <link rel="canonical" href="https://www.doka-rotterdam.nl/cursus.html">
- 
+
     <!-- ── Open Graph (WhatsApp, Facebook, LinkedIn previews) ────────── -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.doka-rotterdam.nl/cursus.html">
     <meta property="og:title" content="Cursus Analoge Fotografie & Donkere Kamer Rotterdam">
     <meta property="og:description" content="Kleinschalige cursus slow photography in Rotterdam. Van analoog portret in de studio tot afdrukken in de donkere kamer — inclusief lunch. Max. 4 personen.">
-    <meta property="og:image" content="https://www.doka-rotterdam.nl/images/cursus_photos/1.jpg">
+    <meta property="og:image" content="https://www.doka-rotterdam.nl/images/cursus_photos/web/1.jpg">
     <meta property="og:locale" content="nl_NL">
     <meta property="og:site_name" content="Doka Rotterdam">
- 
-    <!-- ── Structured data: CourseInstance (helps Google show rich results) -->
+
+    <!-- ── Structured data: Course + one CourseInstance per date ──────────
+         Keep these dates in sync with the "Cursusdata" list below. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -46,309 +48,211 @@
       },
       "url": "https://www.doka-rotterdam.nl/cursus.html",
       "inLanguage": "nl",
-      "courseMode": "onsite",
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "onsite",
-        "location": {
-          "@type": "Place",
-          "name": "Studio Rik Versteeg",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Hildegardisstraat 15",
-            "postalCode": "3036 NS",
-            "addressLocality": "Rotterdam",
-            "addressCountry": "NL"
-          }
-        }
-      }
+      "hasCourseInstance": [
+        { "@type": "CourseInstance", "courseMode": "onsite", "startDate": "2026-11-29T09:30+01:00", "endDate": "2026-11-29T16:00+01:00", "location": { "@type": "Place", "name": "Studio Rik Versteeg", "address": "Hildegardisstraat 15, 3036 NS Rotterdam" } },
+        { "@type": "CourseInstance", "courseMode": "onsite", "startDate": "2027-01-17T09:30+01:00", "endDate": "2027-01-17T16:00+01:00", "location": { "@type": "Place", "name": "Studio Rik Versteeg", "address": "Hildegardisstraat 15, 3036 NS Rotterdam" } },
+        { "@type": "CourseInstance", "courseMode": "onsite", "startDate": "2027-03-21T09:30+01:00", "endDate": "2027-03-21T16:00+01:00", "location": { "@type": "Place", "name": "Studio Rik Versteeg", "address": "Hildegardisstraat 15, 3036 NS Rotterdam" } },
+        { "@type": "CourseInstance", "courseMode": "onsite", "startDate": "2027-05-09T09:30+02:00", "endDate": "2027-05-09T16:00+02:00", "location": { "@type": "Place", "name": "Studio Rik Versteeg", "address": "Hildegardisstraat 15, 3036 NS Rotterdam" } },
+        { "@type": "CourseInstance", "courseMode": "onsite", "startDate": "2027-07-18T09:30+02:00", "endDate": "2027-07-18T16:00+02:00", "location": { "@type": "Place", "name": "Studio Rik Versteeg", "address": "Hildegardisstraat 15, 3036 NS Rotterdam" } },
+        { "@type": "CourseInstance", "courseMode": "onsite", "startDate": "2027-09-19T09:30+02:00", "endDate": "2027-09-19T16:00+02:00", "location": { "@type": "Place", "name": "Studio Rik Versteeg", "address": "Hildegardisstraat 15, 3036 NS Rotterdam" } },
+        { "@type": "CourseInstance", "courseMode": "onsite", "startDate": "2027-11-21T09:30+01:00", "endDate": "2027-11-21T16:00+01:00", "location": { "@type": "Place", "name": "Studio Rik Versteeg", "address": "Hildegardisstraat 15, 3036 NS Rotterdam" } }
+      ]
     }
     </script>
-
-    <style>
-        /* ── Page-specific additions for cursus.html ───────────────────── */
-
-        #menu_cursus {
-            position: fixed;
-        }
-
-        #menu_cursus a {
-            background-color: rgb(255, 0, 149);
-            border: none;
-        }
-
-        #menu_cursus a:hover {
-            background-color: rgb(9, 52, 150);
-            color: rgb(255, 0, 149);
-        }
-
-        /* Blurred backdrop – reuses the same pattern as other pages */
-        #backdrop_cursus {
-            position: fixed;
-            top: 0;
-            width: 100vw;
-            height: 100vh;
-            background-image: url('images/doka_img/compressed/8.jpg');
-            background-size: cover;
-            background-position: center;
-            z-index: 0;
-            filter: saturate(0) blur(20px) brightness(0.4);
-        }
-
-        /* ── Schedule timeline ─────────────────────────────────────────── */
-        .timeline {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .timeline li {
-            display: flex;
-            gap: 18px;
-            margin-bottom: 22px;
-            align-items: flex-start;
-        }
-
-        .timeline-time {
-            flex: 0 0 110px;
-            font-weight: 700;
-            color: rgb(255, 0, 149);
-            font-size: 1em;
-            padding-top: 2px;
-            white-space: nowrap;
-        }
-
-        .timeline-body {
-            flex: 1;
-        }
-
-        .timeline-body strong {
-            display: block;
-            font-size: 1em;
-            margin-bottom: 4px;
-        }
-
-        .timeline-body p {
-            font-size: 0.95em !important;
-            opacity: 0.85;
-            margin: 0;
-        }
-
-        /* ── "Meld je aan" CTA button ──────────────────────────────────── */
-        .cta-btn {
-            display: inline-block;
-            margin-top: 18px;
-            padding: 12px 28px;
-            background-color: rgb(255, 0, 149);
-            color: white;
-            font-family: "Sora", sans-serif;
-            font-weight: 700;
-            font-size: 1.1em;
-            border-radius: 12px;
-            text-decoration: none;
-            transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
-        }
-
-        .cta-btn:hover {
-            background-color: rgb(9, 52, 150);
-            color: rgb(255, 0, 149);
-        }
-
-        /* ── List styling inside text boxes ────────────────────────────── */
-        .text_box_imp ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .text_box_imp ul li::before {
-            content: "— ";
-            color: rgb(255, 0, 149);
-            font-weight: 700;
-        }
-
-        .text_box_imp ul li {
-            margin-bottom: 6px;
-            font-size: 1em;
-        }
-
-        .cursus-photo {
-            flex: 0 0 100%;
-            max-width: 700px;
-            margin: 0 25px 0 auto;
-            border-radius: 20px;
-            overflow: hidden;
-            height: 420px;
-        }
-
-        .cursus-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            filter: saturate(0.15) contrast(1.1);
-            transition: filter 0.4s ease;
-        }
-
-        .cursus-photo img:hover {
-            filter: saturate(1) contrast(1);
-        }
-
-        /* ── Responsive tweaks ─────────────────────────────────────────── */
-        @media (max-width: 700px) {
-            .timeline-time {
-                flex: 0 0 80px;
-                font-size: 0.85em;
-            }
-            .cursus-photo {
-                max-width: 100%;
-                height: 260px;
-                margin: 0 0 0 0;
-                filter: saturate(1) contrast(1);
-            }
-        }
-    </style>
 </head>
 <body>
-
-    <!-- Navigation -->
-    <div class="menu" id="menu_cursus">
-        <a href="index.html">HOME</a>
-        <a href="impression.html">DOKA</a>
-        <a href="cursus.html">CURSUS</a>
-        <a href="reserveren.html">RESERVEREN</a>
-        <a href="team.html">TEAM</a>
-    </div>
-
-    <!-- Blurred background -->
-    <div id="backdrop_cursus"></div>
-
-    <!-- Main content -->
-    <div id="text_frame_booking">
-
-        <h1 style="color: rgb(255, 0, 149);">Cursus</h1>
-
-        <!-- Intro -->
-        <div class="text_box_imp">
-            <p>
-                <h1><b>Van camera tot donkere kamer</b></h1><br>
-                In deze kleinschalige cursus <em>slow photography</em> bij <b>Studio Rik Versteeg in Rotterdam</b> leer je niet alleen hoe je werkt in de <b>donkere kamer</b>, maar ook de basis van analoge fotografie zelf. Van het maken van je eerste analoog portret in de fotostudio tot het ontwikkelen en afdrukken van je eigen werk: je doorloopt het volledige analoge proces.<br><br>
-                Je werkt in een kleine groep van maximaal <b>4 deelnemers</b>, waardoor er veel ruimte is voor persoonlijke begeleiding en aandacht voor jouw ontwikkeling.<br><br>
-                Tijdens de cursus fotograferen deelnemers elkaar — zo leer je niet alleen de techniek, maar ook hoe je werkt met licht, een lichtmeter, iso-instellingen, diafragma, compositie en het vastleggen van een model. Tussen de sessies is er ruimte om te pauzeren en ervaringen uit te wisselen. <b>Een verzorgde lunch is inbegrepen.</b>
-            </p>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="index.html">DOKA <span>ROTTERDAM</span></a>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+            <nav class="nav" id="nav">
+                <a href="index.html">HOME</a>
+                <a href="impression.html">DOKA</a>
+                <a href="cursus.html" aria-current="page">CURSUS</a>
+                <a href="team.html">TEAM</a>
+                <a href="reserveren.html" class="nav-cta">RESERVEREN</a>
+            </nav>
         </div>
+    </header>
 
-        <div class="cursus-photo">
-            <img src="images/cursus_photos/1.jpg" alt="Cursus analoge fotografie">
-        </div>
+    <main>
+        <section class="page-hero" style="--hero-img: url('../images/doka_img/compressed/8.jpg')">
+            <div class="wrap">
+                <span class="eyebrow">Cursus slow photography</span>
+                <h1>Van camera tot <em>donkere kamer</em></h1>
+                <p class="lead">Een kleinschalige cursus bij Studio Rik Versteeg in Rotterdam. Je doorloopt het volledige analoge proces: van je eerste analoog portret in de fotostudio tot het ontwikkelen en afdrukken van je eigen werk.</p>
+                <div class="btn-row">
+                    <a class="btn btn--primary" href="#data">Bekijk cursusdata</a>
+                    <a class="btn btn--ghost" href="#programma">Programma van de dag</a>
+                </div>
+            </div>
+        </section>
 
-        <!-- What you'll learn -->
-        <div class="text_box_imp">
-            <p>
-                <h1><b>Wat ga je leren?</b></h1><br>
-            </p>
-            <ul>
-                <li>Basisprincipes van studiofotografie (instellingen, compositie, belichting)</li>
-                <li>Werken met een analoge Hasselblad camera</li>
-                <li>Elkaar fotograferen — portret en experiment</li>
-                <li>Meekijken bij het ontwikkelen van 120 film in de doka</li>
-                <li>Werken in de donkere kamer</li>
-                <li>Afdrukken maken met een vergroter</li>
-                <li>Werken met contrast, teststrips en beeldselectie</li>
-            </ul>
-        </div>
+        <section class="section">
+            <div class="wrap split">
+                <div>
+                    <span class="eyebrow">Over de cursus</span>
+                    <h2 class="section-title">Leer het hele analoge proces</h2>
+                    <p>In deze kleinschalige cursus <em>slow photography</em> leer je niet alleen hoe je werkt in de <strong>donkere kamer</strong>, maar ook de basis van analoge fotografie zelf.</p>
+                    <p>Je werkt in een kleine groep van maximaal <strong>4 deelnemers</strong>, waardoor er veel ruimte is voor persoonlijke begeleiding en aandacht voor jouw ontwikkeling.</p>
+                    <p>Tijdens de cursus fotograferen deelnemers elkaar — zo leer je niet alleen de techniek, maar ook hoe je werkt met licht, een lichtmeter, iso-instellingen, diafragma, compositie en het vastleggen van een model. Tussen de sessies is er ruimte om te pauzeren en ervaringen uit te wisselen. <strong>Een verzorgde lunch is inbegrepen.</strong></p>
+                </div>
+                <div class="photo photo--bw" style="aspect-ratio: 3 / 2">
+                    <img src="images/cursus_photos/web/1.jpg" alt="Cursus analoge fotografie" loading="lazy">
+                </div>
+            </div>
+        </section>
 
-        <!-- Schedule -->
-        <div class="text_box_imp">
-            <p><h1><b>Programma van de dag</b></h1><br></p>
-            <ul class="timeline">
-                <li>
-                    <span class="timeline-time">09:30 – 12:00</span>
-                    <div class="timeline-body">
-                        <strong>📸 Fotografie, filmontwikkeling & film drogen</strong>
-                        <p>We starten met een introductie in de basis van analoge fotografie. Daarna gaan de deelnemers elkaar fotograferen met onze Hasselblad camera. Vervolgens ontwikkel je je eigen zwart-wit film in de doka met onze hulp. Om er zeker van de zijn dat het proces goed verloopt zullen we twee rolletjes ontwikkelen. Terwijl de film droogt, bereiden we het tweede deel van de dag voor.</p>
+        <section class="section section--tight">
+            <div class="wrap grid-3">
+                <div class="card">
+                    <h3>Wat ga je leren?</h3>
+                    <ul class="list">
+                        <li>Basisprincipes van studiofotografie (instellingen, compositie, belichting)</li>
+                        <li>Werken met een analoge Hasselblad camera</li>
+                        <li>Elkaar fotograferen — portret en experiment</li>
+                        <li>Meekijken bij het ontwikkelen van 120 film in de doka</li>
+                        <li>Werken in de donkere kamer</li>
+                        <li>Afdrukken maken met een vergroter</li>
+                        <li>Werken met contrast, teststrips en beeldselectie</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Voor wie is deze cursus?</h3>
+                    <ul class="list">
+                        <li>Beginners die willen starten met analoge fotografie</li>
+                        <li>Creatieven die meer willen leren over portretfotografie</li>
+                        <li>Fotografen die hun proces willen verdiepen</li>
+                        <li>Iedereen die wil werken in een donkere kamer in Rotterdam</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Waarom deze cursus?</h3>
+                    <ul class="list">
+                        <li>Kleine groep — max. 4 personen</li>
+                        <li>Persoonlijke en artistieke begeleiding</li>
+                        <li>Combinatie van fotograferen en doka-werk</li>
+                        <li>Inclusief lunch</li>
+                        <li>Hands-on: van opname tot eindprint, die je mee naar huis neemt</li>
+                        <li>Alleen zwart-wit fotografie — volledig analoog</li>
+                        <li>Alle benodigde materialen inbegrepen</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--tight" id="programma">
+            <div class="wrap split" style="align-items: start">
+                <div>
+                    <span class="eyebrow">Programma</span>
+                    <h2 class="section-title">Programma van de dag</h2>
+                    <ul class="timeline">
+                        <li>
+                            <span class="timeline-time">09:30 – 12:00</span>
+                            <div class="timeline-body">
+                                <strong>📸 Fotografie, filmontwikkeling &amp; film drogen</strong>
+                                <p>We starten met een introductie in de basis van analoge fotografie. Daarna gaan de deelnemers elkaar fotograferen met onze Hasselblad camera. Vervolgens ontwikkel je je eigen zwart-wit film in de doka met onze hulp. Om er zeker van te zijn dat het proces goed verloopt zullen we twee rolletjes ontwikkelen. Terwijl de film droogt, bereiden we het tweede deel van de dag voor.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="timeline-time">12:00 – 12:30</span>
+                            <div class="timeline-body">
+                                <strong>🍽️ Lunch &amp; reflectiemoment</strong>
+                                <p>Een gezamenlijke, verzorgde lunch. Dit moment wordt gebruikt om ervaringen te bespreken, beelden te analyseren en vragen te stellen over het proces tot nu toe.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="timeline-time">12:30 – 16:00</span>
+                            <div class="timeline-body">
+                                <strong>🧪 Afdrukken in de donkere kamer</strong>
+                                <p>Je leert hoe je een negatief omzet naar een analoge zwart-wit print met een vergroter. Contactsheet, belichtingstijden, tegenhouden en doordrukken, contrast en compositie — alles om jouw foto's perfect af te drukken.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="photo photo--bw" style="aspect-ratio: 2 / 3">
+                    <img src="images/cursus_photos/web/2.jpg" alt="Werken in de donkere kamer" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Course dates. To add a date: copy an <li>, update datetime, data-label
+             and the visible text, and add a matching CourseInstance in the
+             JSON-LD in <head>. Past dates are hidden automatically by script/main.js. -->
+        <section class="section section--tight" id="data">
+            <div class="wrap">
+                <span class="eyebrow">Cursusdata</span>
+                <h2 class="section-title">Kies jouw zondag</h2>
+                <p class="muted" style="margin-bottom: 28px">Alle cursussen vinden plaats op zondag van 09:30 tot 16:00.</p>
+                <ul class="dates">
+                    <li class="date-card" data-label="Zondag 29 november 2026"><time datetime="2026-11-29"><span class="day">Zondag</span><span class="date">29 november</span><span class="year">2026</span></time></li>
+                    <li class="date-card" data-label="Zondag 17 januari 2027"><time datetime="2027-01-17"><span class="day">Zondag</span><span class="date">17 januari</span><span class="year">2027</span></time></li>
+                    <li class="date-card" data-label="Zondag 21 maart 2027"><time datetime="2027-03-21"><span class="day">Zondag</span><span class="date">21 maart</span><span class="year">2027</span></time></li>
+                    <li class="date-card" data-label="Zondag 9 mei 2027"><time datetime="2027-05-09"><span class="day">Zondag</span><span class="date">9 mei</span><span class="year">2027</span></time></li>
+                    <li class="date-card" data-label="Zondag 18 juli 2027"><time datetime="2027-07-18"><span class="day">Zondag</span><span class="date">18 juli</span><span class="year">2027</span></time></li>
+                    <li class="date-card" data-label="Zondag 19 september 2027"><time datetime="2027-09-19"><span class="day">Zondag</span><span class="date">19 september</span><span class="year">2027</span></time></li>
+                    <li class="date-card" data-label="Zondag 21 november 2027"><time datetime="2027-11-21"><span class="day">Zondag</span><span class="date">21 november</span><span class="year">2027</span></time></li>
+                </ul>
+                <p class="muted" data-dates-empty hidden>Nieuwe data volgen binnenkort. Mail ons via <a href="mailto:info@doka-rotterdam.nl">info@doka-rotterdam.nl</a>.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap grid-2">
+                <div class="card card--accent">
+                    <h3>Praktische informatie</h3>
+                    <dl class="facts">
+                        <dt>Eerstvolgende cursus</dt>
+                        <dd data-next-course>Zondag 29 november 2026</dd>
+                        <dt>Tijd</dt>
+                        <dd>09:30 – 16:00</dd>
+                        <dt>Locatie</dt>
+                        <dd>Studio Rik Versteeg, Hildegardisstraat 15 · 3036 NS Rotterdam</dd>
+                        <dt>Groepsgrootte</dt>
+                        <dd>Maximaal 4 personen</dd>
+                        <dt>Inclusief</dt>
+                        <dd>Introductie, begeleiding, lunch en alle materialen</dd>
+                        <dt>Fotografie</dt>
+                        <dd>Uitsluitend zwart-wit</dd>
+                    </dl>
+                    <p class="muted" style="margin-top: 20px">Wil je de volledige magie van analoge fotografie ervaren? Schrijf je in en ontdek hoe jouw beelden tot leven komen — van camera tot print.</p>
+                    <div class="btn-row">
+                        <a class="btn btn--primary" href="https://www.eventbrite.nl/e/masterclass-cursus-analoge-fotografie-printen-in-de-doka-tickets-1994800169004" target="_blank" rel="noopener">Meld je aan</a>
                     </div>
-                </li>
-                <li>
-                    <span class="timeline-time">12:00 – 12:30</span>
-                    <div class="timeline-body">
-                        <strong>🍽️ Lunch & reflectiemoment</strong>
-                        <p>Een gezamenlijke, verzorgde lunch. Dit moment wordt gebruikt om ervaringen te bespreken, beelden te analyseren en vragen te stellen over het proces tot nu toe.</p>
+                </div>
+                <div class="card">
+                    <h3>Korting via Werktuig PPO</h3>
+                    <p class="muted">Via <strong style="color: var(--text)">Werktuig PPO</strong> kun je deze cursus met korting volgen. Bekijk de onderstaande link voor alle informatie over de spelregels en voorwaarden.</p>
+                    <div class="btn-row">
+                        <a class="btn btn--ghost" href="https://werktuigppo.nl/spelregels/" target="_blank" rel="noopener">Meer informatie</a>
                     </div>
-                </li>
-                <li>
-                    <span class="timeline-time">12:30 – 16:00</span>
-                    <div class="timeline-body">
-                        <strong>🧪 Afdrukken in de donkere kamer</strong>
-                        <p>Je leert hoe je een negatief omzet naar een analoge zwart-wit print met een vergroter. Contactsheet, belichtingstijden, tegenhouden en doordrukken, contrast en compositie — alles om jouw foto's perfect af te drukken.</p>
-                    </div>
-                </li>
-            </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="cols">
+                <div>
+                    <a class="brand" href="index.html">DOKA <span>ROTTERDAM</span></a>
+                    <p style="margin-top: 12px">Professionele donkere kamer en cursussen analoge fotografie bij Studio Rik Versteeg.</p>
+                </div>
+                <div>
+                    <h4>Adres</h4>
+                    <address><a href="https://maps.app.goo.gl/UmLGHMcnTGEYaz4e9" target="_blank" rel="noopener">Hildegardisstraat 15<br>3036 NS Rotterdam<br>Nederland</a></address>
+                </div>
+                <div>
+                    <h4>Info</h4>
+                    <ul>
+                        <li><a href="mailto:info@doka-rotterdam.nl">info@doka-rotterdam.nl</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Algemene Voorwaarden</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="legal">&copy; 2026 Doka Rotterdam. Alle rechten voorbehouden.</p>
         </div>
-
-        <div class="cursus-photo">
-            <img src="images/cursus_photos/2.jpg" alt="Werken in de donkere kamer">
-        </div>
-
-        <!-- For whom -->
-        <div class="text_box_imp">
-            <p><h1><b>Voor wie is deze cursus?</b></h1><br></p>
-            <ul>
-                <li>Beginners die willen starten met analoge fotografie</li>
-                <li>Creatieven die meer willen leren over portretfotografie</li>
-                <li>Fotografen die hun proces willen verdiepen</li>
-                <li>Iedereen die wil werken in een donkere kamer in Rotterdam</li>
-            </ul>
-        </div>
-
-        <!-- Why this course -->
-        <div class="text_box_imp">
-            <p><h1><b>Waarom deze cursus?</b></h1><br></p>
-            <ul>
-                <li>Kleine groep — max. 4 personen</li>
-                <li>Persoonlijke en artistieke begeleiding</li>
-                <li>Combinatie van fotograferen en doka-werk</li>
-                <li>Inclusief lunch</li>
-                <li>Hands-on: van opname tot eindprint, die je mee naar huis neemt</li>
-                <li>Alleen zwart-wit fotografie — volledig analoog</li>
-                <li>Alle benodigde materialen inbegrepen</li>
-            </ul>
-        </div>
-
-        <!-- Werktuig PPO -->
-        <div class="text_box_imp">
-            <p>
-                <h1><b>Korting via Werktuig PPO</b></h1><br>
-                Via <b>Werktuig PPO</b> kun je deze cursus met korting volgen. Bekijk de onderstaande link voor alle informatie over de spelregels en voorwaarden.
-            </p>
-            <a class="cta-btn" href="https://werktuigppo.nl/spelregels/" target="_blank">Meer informatie</a>
-        </div>
-
-        <!-- Practical info + CTA -->
-        <div class="text_box_imp">
-            <p>
-                <h1><b>Praktische informatie</b></h1><br>
-                <b>Eerstvolgende Cursus:</b> Zondag 4 oktober 2026<br>
-                <b>Locatie:</b> Studio Rik Versteeg, Rotterdam (Hildegardisstraat 15 · 3036 NS Rotterdam)<br>
-                <b>Groepsgrootte:</b> maximaal 4 personen<br>
-                <b>Inclusief:</b> introductie, begeleiding, lunch en alle materialen<br>
-                <b>Fotografie:</b> uitsluitend zwart-wit<br><br>
-                Wil je de volledige magie van analoge fotografie ervaren? Schrijf je in en ontdek hoe jouw beelden tot leven komen — van camera tot print.
-            </p>
-            <a class="cta-btn" href="https://www.eventbrite.nl/e/masterclass-cursus-analoge-fotografie-printen-in-de-doka-tickets-1994800169004?aff=oddtdtcreator&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleATivXpwZG9mAmZkaWQWUMBZl14uy20vcYsZFo59S1v8gI5lN2V4dG4DYWVtAjExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABpzJpbkqkjA_5LW-RB-RSAIscEEKn-IBGG_vD7jiGy6YYLYe_jqt8MjPe8rQi_aem_DJ3ssyo2s4yavxHA6Uj0eA" target="_blank">Meld je aan</a>
-        </div>
-
-    </div>
-
-    <!-- Footer -->
-    <div id="footer">
-        <p>&copy; 2026 Doka Rotterdam. Alle rechten voorbehouden.</p>
-        <a href="https://maps.app.goo.gl/UmLGHMcnTGEYaz4e9" target="_blank">
-            <p>Hildegardisstraat 15 · 3036 NS Rotterdam · Nederland</p>
-        </a>
-        <p><a href="terms.html" target="_blank">Algemene Voorwaarden</a></p>
-        <p><a href="contact.html">Contact</a></p>
-    </div>
-
+    </footer>
 </body>
 </html>

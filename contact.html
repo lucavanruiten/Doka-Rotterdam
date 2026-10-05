@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="images/logo/logo_icon.png">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="icon" type="image/png" href="images/logo/logo_icon.png">
+    <script src="script/main.js" defer></script>
 
     <title>Contact – Doka Rotterdam | Donkere Kamer Rotterdam</title>
     <meta name="description" content="Vragen over het huren van de donkere kamer of de cursus? Neem contact op via info@doka-rotterdam.nl. Studio Rik Versteeg, Hildegardisstraat 15, Rotterdam.">
@@ -24,32 +25,72 @@
     <meta property="og:site_name" content="Doka Rotterdam">
 </head>
 <body>
-    <div class="menu" id="menu_impression">
-        <a href="index.html">HOME</a>
-        <a href="impression.html">DOKA</a>
-        <a href="cursus.html">CURSUS</a>
-        <a href="reserveren.html">RESERVEREN</a>
-        <a href="team.html">TEAM</a>
-    </div>
-    <div id="contact_container">
-        <div id="contact_box">
-            <h1 style="font-size: 4em">Vragen? Mail ons!</h1><br>
-            <a href="mailto:info@doka-rotterdam.nl">info@doka-rotterdam.nl</a><br><br>
-            <h1>Locatie</h1>
-            <a style="border: none" href="https://maps.app.goo.gl/UmLGHMcnTGEYaz4e9" target="_blank"><p>Hildegardisstraat 15</p>
-            <p>3036 NS</p>
-            <p>Rotterdam, Nederland</p></a>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="index.html">DOKA <span>ROTTERDAM</span></a>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+            <nav class="nav" id="nav">
+                <a href="index.html">HOME</a>
+                <a href="impression.html">DOKA</a>
+                <a href="cursus.html">CURSUS</a>
+                <a href="team.html">TEAM</a>
+                <a href="reserveren.html" class="nav-cta">RESERVEREN</a>
+            </nav>
         </div>
-    </div>
-  <div id="footer">
-    <p>&copy; 2026 Doka Rotterdam. Alle rechten voorbehouden.</p>
-    <a href="https://maps.app.goo.gl/UmLGHMcnTGEYaz4e9" target="_blank"><p>Hildegardisstraat 15
-        3036 NS
-        Rotterdam
-        Nederland
-    </p></a>
-    <p><a href="terms.html" target="_blank">Algemene Voorwaarden</a></p>
-    <p><a href="contact.html">Contact</a></p>
-  </div>
+    </header>
+
+    <main>
+        <section class="page-hero" style="--hero-img: url('../images/compressed/3.jpg')">
+            <div class="wrap">
+                <span class="eyebrow">Contact</span>
+                <h1>Vragen? <em>Mail ons!</em></h1>
+                <p class="lead">Over het huren van de donkere kamer, de cursus of iets anders — we horen graag van je.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap grid-2">
+                <div class="card card--accent">
+                    <h3>E-mail</h3>
+                    <a class="contact-mail" href="mailto:info@doka-rotterdam.nl">info@doka-rotterdam.nl</a>
+                </div>
+                <div class="card">
+                    <h3>Locatie</h3>
+                    <address style="font-style: normal">
+                        Studio Rik Versteeg<br>
+                        Hildegardisstraat 15<br>
+                        3036 NS Rotterdam, Nederland
+                    </address>
+                    <div class="btn-row">
+                        <a class="btn btn--ghost" href="https://maps.app.goo.gl/UmLGHMcnTGEYaz4e9" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="cols">
+                <div>
+                    <a class="brand" href="index.html">DOKA <span>ROTTERDAM</span></a>
+                    <p style="margin-top: 12px">Professionele donkere kamer en cursussen analoge fotografie bij Studio Rik Versteeg.</p>
+                </div>
+                <div>
+                    <h4>Adres</h4>
+                    <address><a href="https://maps.app.goo.gl/UmLGHMcnTGEYaz4e9" target="_blank" rel="noopener">Hildegardisstraat 15<br>3036 NS Rotterdam<br>Nederland</a></address>
+                </div>
+                <div>
+                    <h4>Info</h4>
+                    <ul>
+                        <li><a href="mailto:info@doka-rotterdam.nl">info@doka-rotterdam.nl</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Algemene Voorwaarden</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="legal">&copy; 2026 Doka Rotterdam. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="images/logo/logo_icon.png">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="icon" type="image/png" href="images/logo/logo_icon.png">
+    <script src="script/main.js" defer></script>
 
     <title>Ons Team – Rik Versteeg & Luca van Ruiten | Doka Rotterdam</title>
     <meta name="description" content="Maak kennis met Rik Versteeg en Luca van Ruiten, de fotografen achter Doka Rotterdam. Professionele begeleiding bij analoge fotografie en donkere kamer werk.">
@@ -19,48 +20,81 @@
     <meta property="og:url" content="https://www.doka-rotterdam.nl/team.html">
     <meta property="og:title" content="Ons Team – Rik Versteeg & Luca van Ruiten">
     <meta property="og:description" content="Rik Versteeg en Luca van Ruiten zijn de fotografen achter Doka Rotterdam. Ervaren begeleiders in analoge fotografie en donkere kamer werk.">
-    <meta property="og:image" content="https://www.doka-rotterdam.nl/images/team/img20260310_10524083.jpg">
+    <meta property="og:image" content="https://www.doka-rotterdam.nl/images/team/web/rik.jpg">
     <meta property="og:locale" content="nl_NL">
     <meta property="og:site_name" content="Doka Rotterdam">
 </head>
-<body style="background-color: black;">
-    <div class="menu" id="menu_impression">
-        <a href="index.html">HOME</a>
-        <a href="impression.html">DOKA</a>
-        <a href="cursus.html">CURSUS</a>
-        <a href="reserveren.html">RESERVEREN</a>
-        <a href="team.html">TEAM</a>
-    </div>
-    <div id="backdrop_team"></div>
-    <div id="team_container">
-        <div class="team_card" id="Rik">
-            <h1>RIK VERSTEEG</h1><br>
-            <img src="images/team/img20260310_10524083.jpg" alt="Rik Versteeg" class="team_image">
-            <p>Rik Versteeg is een queer visueel kunstenaar en professioneel fotograaf uit Rotterdam. Hij werkt in opdracht en aan eigen projecten, vaak met een focus op portret, identiteit en de gelaagdheid van beeld. Zijn werk beweegt zich tussen commerciële fotografie en autonoom artistiek werk, waarin persoonlijke verhalen en maatschappelijke thema’s regelmatig terugkomen.<br><br>
-
-De afgelopen jaren heeft hij zich steeds verder gespecialiseerd in analoge fotografie. Hij werkt met het volledige proces: van het fotograferen op film tot het ontwikkelen en het maken van handmatige afdrukken in de donkere kamer. Door deze combinatie van digitaal en analoog werk heeft hij een brede technische basis opgebouwd en veel praktische ervaring met verschillende fotografische workflows.<br><br>
-
-Die ervaring gebruikt hij om de donkere kamer te runnen als een toegankelijke, goed uitgeruste werkplek voor zowel beginnende als ervaren fotografen die zelf met analoge fotografie aan de slag willen.</p><br>
-            <a class="personal_link" href="https://rikversteeg.com/nl/" target="_blank">www.rikversteeg.com</a>
+<body>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="index.html">DOKA <span>ROTTERDAM</span></a>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+            <nav class="nav" id="nav">
+                <a href="index.html">HOME</a>
+                <a href="impression.html">DOKA</a>
+                <a href="cursus.html">CURSUS</a>
+                <a href="team.html" aria-current="page">TEAM</a>
+                <a href="reserveren.html" class="nav-cta">RESERVEREN</a>
+            </nav>
         </div>
-        <div class="team_card" id="Luca">
-            <h1>LUCA VAN RUITEN</h1><br>
-            <img src="images/team/img20260310_10544461.jpg" alt="Luca van Ruiten" class="team_image">
-            <p>Luca van Ruiten is een fotograaf die zich voornamelijk bezighoudt met documentair fotografisch werk rondom de queer gemeenschap in Nederland. In zijn praktijk onderzoekt hij thema’s als identiteit, representatie en zichtbaarheid, vaak met een persoonlijke en directe beeldtaal. Zijn werk kenmerkt zich door een sterke focus op portret en het vastleggen van intieme, eerlijke momenten.<br><br>
+    </header>
 
-Naast zijn autonome werk heeft Luca een brede interesse in het fotografische proces als geheel. Hij werkt zowel digitaal als analoog en heeft zich verdiept in het ambacht van de donkere kamer: van het ontwikkelen van film tot het maken van prints. Deze combinatie van technieken stelt hem in staat om bewust keuzes te maken binnen verschillende workflows en materialen.</p><br>
-            <a class="personal_link" href="https://www.lucavanruiten.com" target="_blank">www.lucavanruiten.com</a>
+    <main>
+        <section class="page-hero" style="--hero-img: url('../images/compressed/1.jpg')">
+            <div class="wrap">
+                <span class="eyebrow">Team</span>
+                <h1>De makers achter de <em>doka</em></h1>
+                <p class="lead">Twee fotografen die werken met het volledige analoge proces, en je daar graag in begeleiden.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap grid-2">
+                <article class="card team-card" id="Rik">
+                    <img src="images/team/web/rik.jpg" alt="Rik Versteeg" loading="lazy">
+                    <div class="body">
+                        <h2>Rik Versteeg</h2>
+                        <p>Rik Versteeg is een queer visueel kunstenaar en professioneel fotograaf uit Rotterdam. Hij werkt in opdracht en aan eigen projecten, vaak met een focus op portret, identiteit en de gelaagdheid van beeld. Zijn werk beweegt zich tussen commerciële fotografie en autonoom artistiek werk, waarin persoonlijke verhalen en maatschappelijke thema’s regelmatig terugkomen.</p>
+                        <p>De afgelopen jaren heeft hij zich steeds verder gespecialiseerd in analoge fotografie. Hij werkt met het volledige proces: van het fotograferen op film tot het ontwikkelen en het maken van handmatige afdrukken in de donkere kamer. Door deze combinatie van digitaal en analoog werk heeft hij een brede technische basis opgebouwd en veel praktische ervaring met verschillende fotografische workflows.</p>
+                        <p>Die ervaring gebruikt hij om de donkere kamer te runnen als een toegankelijke, goed uitgeruste werkplek voor zowel beginnende als ervaren fotografen die zelf met analoge fotografie aan de slag willen.</p>
+                        <a class="btn btn--ghost" href="https://rikversteeg.com/nl/" target="_blank" rel="noopener">rikversteeg.com ↗</a>
+                    </div>
+                </article>
+                <article class="card team-card" id="Luca">
+                    <img src="images/team/web/luca.jpg" alt="Luca van Ruiten" loading="lazy">
+                    <div class="body">
+                        <h2>Luca van Ruiten</h2>
+                        <p>Luca van Ruiten is een fotograaf die zich voornamelijk bezighoudt met documentair fotografisch werk rondom de queer gemeenschap in Nederland. In zijn praktijk onderzoekt hij thema’s als identiteit, representatie en zichtbaarheid, vaak met een persoonlijke en directe beeldtaal. Zijn werk kenmerkt zich door een sterke focus op portret en het vastleggen van intieme, eerlijke momenten.</p>
+                        <p>Naast zijn autonome werk heeft Luca een brede interesse in het fotografische proces als geheel. Hij werkt zowel digitaal als analoog en heeft zich verdiept in het ambacht van de donkere kamer: van het ontwikkelen van film tot het maken van prints. Deze combinatie van technieken stelt hem in staat om bewust keuzes te maken binnen verschillende workflows en materialen.</p>
+                        <a class="btn btn--ghost" href="https://www.lucavanruiten.com" target="_blank" rel="noopener">lucavanruiten.com ↗</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="cols">
+                <div>
+                    <a class="brand" href="index.html">DOKA <span>ROTTERDAM</span></a>
+                    <p style="margin-top: 12px">Professionele donkere kamer en cursussen analoge fotografie bij Studio Rik Versteeg.</p>
+                </div>
+                <div>
+                    <h4>Adres</h4>
+                    <address><a href="https://maps.app.goo.gl/UmLGHMcnTGEYaz4e9" target="_blank" rel="noopener">Hildegardisstraat 15<br>3036 NS Rotterdam<br>Nederland</a></address>
+                </div>
+                <div>
+                    <h4>Info</h4>
+                    <ul>
+                        <li><a href="mailto:info@doka-rotterdam.nl">info@doka-rotterdam.nl</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Algemene Voorwaarden</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="legal">&copy; 2026 Doka Rotterdam. Alle rechten voorbehouden.</p>
         </div>
-    </div>
-  <div id="footer">
-    <p>&copy; 2026 Doka Rotterdam. Alle rechten voorbehouden.</p>
-    <a href="https://maps.app.goo.gl/UmLGHMcnTGEYaz4e9" target="_blank"><p>Hildegardisstraat 15
-        3036 NS
-        Rotterdam
-        Nederland
-    </p></a>
-    <p><a href="terms.html" target="_blank">Algemene Voorwaarden</a></p>
-    <p><a href="contact.html">Contact</a></p>
-  </div>
+    </footer>
 </body>
 </html>

@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="images/logo/logo_icon.png">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="icon" type="image/png" href="images/logo/logo_icon.png">
+    <script src="script/main.js" defer></script>
 
     <title>Doka Rotterdam – Professionele Donkere Kamer Huren in Rotterdam</title>
     <meta name="description" content="Huur een professionele donkere kamer in Rotterdam bij Studio Rik Versteeg. Volledig uitgerust voor zwart-wit film ontwikkelen en afdrukken. Boek direct online.">
@@ -38,59 +39,117 @@
           "addressLocality": "Rotterdam",
           "addressCountry": "NL"
         },
-        "telephone": "",
         "email": "info@doka-rotterdam.nl"
       }
     </script>
 </head>
 <body>
-    <div class="menu" id="menu_impression">
-        <a href="index.html">HOME</a>
-        <a href="impression.html">DOKA</a>
-        <a href="cursus.html">CURSUS</a>
-        <a href="reserveren.html">RESERVEREN</a>
-        <a href="team.html">TEAM</a>
-    </div>
-    <div id="header">
-        <!-- <h1>DOKA ROTTERDAM</h1> -->
-         <img id="logo" src="images/logo/logo_full_size_white.png">
-    </div>
-    <div id="overlay"></div>
-     <div class="container">
-    <div class="track">
-      <!-- First set -->
-      <div class="image" style="background-image: url('images/compressed/1.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/2.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/3.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/4.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/5.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/6.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/7.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/8.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/9.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/10.jpg')"></div>
+    <header class="site-header site-header--overlay">
+        <div class="wrap">
+            <a class="brand" href="index.html">DOKA <span>ROTTERDAM</span></a>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+            <nav class="nav" id="nav">
+                <a href="index.html" aria-current="page">HOME</a>
+                <a href="impression.html">DOKA</a>
+                <a href="cursus.html">CURSUS</a>
+                <a href="team.html">TEAM</a>
+                <a href="reserveren.html" class="nav-cta">RESERVEREN</a>
+            </nav>
+        </div>
+    </header>
 
-      <div class="image" style="background-image: url('images/compressed/1.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/2.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/3.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/4.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/5.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/6.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/7.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/8.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/9.jpg')"></div>
-      <div class="image" style="background-image: url('images/compressed/10.jpg')"></div>
-    </div>
-  </div>
-  <div id="footer">
-    <p>&copy; 2026 Doka Rotterdam. Alle rechten voorbehouden.</p>
-    <a href="https://maps.app.goo.gl/UmLGHMcnTGEYaz4e9" target="_blank"><p>Hildegardisstraat 15
-        3036 NS
-        Rotterdam
-        Nederland
-    </p></a>
-    <p><a href="terms.html" target="_blank">Algemene Voorwaarden</a></p>
-    <p><a href="contact.html">Contact</a></p>
-  </div>
+    <main>
+        <section class="home-hero">
+            <div class="track" aria-hidden="true">
+                <!-- Two identical sets so the scroll animation loops seamlessly -->
+                <div class="image" style="background-image: url('images/compressed/1.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/2.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/3.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/4.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/5.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/6.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/7.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/8.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/9.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/10.jpg')"></div>
+
+                <div class="image" style="background-image: url('images/compressed/1.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/2.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/3.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/4.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/5.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/6.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/7.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/8.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/9.jpg')"></div>
+                <div class="image" style="background-image: url('images/compressed/10.jpg')"></div>
+            </div>
+            <div id="overlay"></div>
+            <div class="home-hero__logo">
+                <img src="images/logo/logo_full_size_white.png" alt="Doka Rotterdam">
+            </div>
+            <div class="home-hero__content">
+                <h1 class="sr-only">Doka Rotterdam – donkere kamer huren in Rotterdam</h1>
+                <p>Professionele donkere kamer &amp; cursussen analoge fotografie in Rotterdam</p>
+                <div class="btn-row">
+                    <a class="btn btn--primary" href="reserveren.html">Doka reserveren</a>
+                    <a class="btn btn--ghost" href="cursus.html">Bekijk de cursus</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <span class="eyebrow">Studio Rik Versteeg</span>
+                <h2 class="section-title">Van negatief tot eindprint</h2>
+                <p class="lead muted" style="max-width: 62ch">Een volledig uitgeruste zwart-wit donkere kamer in Rotterdam. Huur de doka voor een dagdeel, of leer het hele analoge proces in een kleinschalige cursus.</p>
+
+                <div class="grid-3" style="margin-top: 40px">
+                    <a class="card feature" href="impression.html">
+                        <span class="num">01 — DOKA</span>
+                        <h3>De donkere kamer</h3>
+                        <p>Durst M605 vergroter, droogkast, ontwikkeltanks en chemicaliën. Alles staat klaar.</p>
+                        <span class="arrow">Bekijk de doka →</span>
+                    </a>
+                    <a class="card feature" href="cursus.html">
+                        <span class="num">02 — CURSUS</span>
+                        <h3>Van camera tot donkere kamer</h3>
+                        <p>Fotograferen met een Hasselblad, film ontwikkelen en afdrukken. Max. 4 personen, lunch inbegrepen.</p>
+                        <span class="arrow">Cursusdata →</span>
+                    </a>
+                    <a class="card feature" href="reserveren.html">
+                        <span class="num">03 — RESERVEREN</span>
+                        <h3>Vanaf €65 per dagdeel</h3>
+                        <p>Halve dag, avond of hele dag. Inclusief BTW, introductie en chemicaliën.</p>
+                        <span class="arrow">Tarieven &amp; boeken →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="cols">
+                <div>
+                    <a class="brand" href="index.html">DOKA <span>ROTTERDAM</span></a>
+                    <p style="margin-top: 12px">Professionele donkere kamer en cursussen analoge fotografie bij Studio Rik Versteeg.</p>
+                </div>
+                <div>
+                    <h4>Adres</h4>
+                    <address><a href="https://maps.app.goo.gl/UmLGHMcnTGEYaz4e9" target="_blank" rel="noopener">Hildegardisstraat 15<br>3036 NS Rotterdam<br>Nederland</a></address>
+                </div>
+                <div>
+                    <h4>Info</h4>
+                    <ul>
+                        <li><a href="mailto:info@doka-rotterdam.nl">info@doka-rotterdam.nl</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Algemene Voorwaarden</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="legal">&copy; 2026 Doka Rotterdam. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
 </body>
 </html>

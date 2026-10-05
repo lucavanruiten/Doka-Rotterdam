@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="images/logo/logo_icon.png">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="icon" type="image/png" href="images/logo/logo_icon.png">
+    <script src="script/main.js" defer></script>
 
     <title>Donkere Kamer Huren Rotterdam | Doka Rotterdam</title>
     <meta name="description" content="Huur onze professionele donkere kamer in Rotterdam met Durst M605 vergroter, chemicaliën en begeleiding inbegrepen. Perfect voor zwart-wit film ontwikkelen en afdrukken.">
@@ -47,97 +48,133 @@
     </script>
 </head>
 <body>
-    <div class="menu" id="menu_impression">
-        <a href="index.html">HOME</a>
-        <a href="impression.html">DOKA</a>
-        <a href="cursus.html">CURSUS</a>
-        <a href="reserveren.html">RESERVEREN</a>
-        <a href="team.html">TEAM</a>
-    </div>
-    <div id="backdrop_impression"></div>
-        <div id="text_frame_booking">
-            <h1 style="color: rgb(255, 0, 149)">Doka Rotterdam</h1>
-            <div class="text_box_imp">
-                <p><h1><b>Professionele doka voor analoge fotografie</b></h1><br>
-
-                    Bij Studio Rik Versteeg huur je een volledig uitgeruste donkere kamer in Rotterdam, perfect voor fotografen die hun eigen zwart-wit film willen ontwikkelen en afdrukken. Deze professionele doka is ingericht voor zowel beginners als ervaren makers die willen werken met analoge fotografie technieken.<br><br>
-                    De ruimte is uitgerust met een hoogwaardige Durst M605 vergroter met 75mm lens, waarmee je haarscherpe prints maakt. Alles wat je nodig hebt – van chemicaliën tot ontwikkelschalen en veilig licht – is inbegrepen in de huurprijs. Zo kun je je volledig focussen op het creatieve proces, van negatief tot eindprint.<br><br>
-                    Wil je zelf je film ontwikkelen of hoogwaardige zwart-wit prints maken in een rustige en professionele omgeving? <b><a style="color: white;" href="reserveren.html">Boek</a></b> dan nu jouw doka sessie in Rotterdam en breng je analoge werk tot leven.</a><br>
-                </p>
-            </div>
-            <div class="text_box_imp">
-                <p><h1><b>Introductie & begeleiding</b></h1><br>
-                    Voorafgaand aan je sessie krijg je een korte introductie in de donkere kamer. We helpen je graag op weg met:<br>
-                    - Werken met de Durst vergroter en ingebouwde contrasten<br>
-                    - Uitleg over de timer<br><br>
-                    De chemicaliën zullen wij voor je klaar zetten waardoor je geen tijd verliest en meteen kan beginnen met printen
-                    Na deze uitleg werk je zelfstandig. Tijdens je sessie is er altijd ondersteuning beschikbaar als je vragen hebt of hulp nodig hebt.<br><br>
-                </p>
-            </div>
-            <div class="text_box_imp">
-                <p>
-                    <h1><b>Specificaties van de doka</b></h1><br>
-                    - Professionele Durst M605 vergroter met instelbare grijswaarden<br>
-                    - 75mm lens (f/4 – f/22) voor scherpe en gedetailleerde afdrukken<br>
-                    - Droogkast: jouw ontwikkelde film droog in ±30 minuten<br>
-                    - Afdrukken mogelijk tot 50 x 50 cm (op aanvraag, aangepaste setup nodig)<br>
-                    - Ontwikkel schalen in meerdere formaten inbegrepen<br>
-                    - Film retriever voor 35mm film<br>
-                    - ⁠Ontwikkeltanks voor 35 mm en 120 film<br><br>
-                </p>
-            </div>
-            <div class="text_box_imp">
-                <p>
-                    <h1><b>Inclusief:</b></h1><br>
-                    - Chemicaliën (goed voor ±10 A4 prints, exclusief teststrips)<br>
-                    - ⁠Basis begeleiding omtrent de apparatuur<br><br>
-
-                    <h1><b>Exclusief:</b></h1><br>
-                    - Fotopapier (verkrijgbaar bij FotoFilmFabriek)<br>
-                    - Alleen geschikt voor zwart-wit fotografie (geen kleurontwikkeling)<br>
-                    - ⁠Extra chemicaliën gebruik : €10 per 10 afdrukken<br>
-                    - ⁠Intensieve begeleiding omtrent tegenhouden, doordrukken, contrast en werken met Bariet papier (extra bij te boeken voor €30,00)<br>
-                </p>
-            </div>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="index.html">DOKA <span>ROTTERDAM</span></a>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+            <nav class="nav" id="nav">
+                <a href="index.html">HOME</a>
+                <a href="impression.html" aria-current="page">DOKA</a>
+                <a href="cursus.html">CURSUS</a>
+                <a href="team.html">TEAM</a>
+                <a href="reserveren.html" class="nav-cta">RESERVEREN</a>
+            </nav>
         </div>
-    <div id="gallery">
-        <figure class="gallery__item gallery__item--1">
-            <img src="images/doka_img/compressed/7.jpg" alt="Gallery image 1" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--2">
-            <img src="images/doka_img/compressed/2.jpg" alt="Gallery image 2" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--3">
-            <video autoplay muted loop src="images/videos/video1.webm" alt="Gallery image 3" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--4">
-            <img src="images/doka_img/compressed/4.jpg" alt="Gallery image 4" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--5">
-            <video autoplay muted loop src="images/videos/video2.webm" alt="Gallery image 5" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--7">
-            <img src="images/doka_img/compressed/3.jpg" alt="Gallery image 7" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--8">
-            <img src="images/doka_img/compressed/4.jpg" alt="Gallery image 8" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--9">
-            <video autoplay muted loop src="images/videos/video3.webm" alt="Gallery image 9" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--10">
-            <video autoplay muted loop src="images/videos/video_10.webm" alt="Gallery image 10" class="gallery__img">
-        </figure>
-    </div>
-    <div id="footer">
-        <p>&copy; 2026 Doka Rotterdam. Alle rechten voorbehouden.</p>
-        <a href="https://maps.app.goo.gl/UmLGHMcnTGEYaz4e9" target="_blank"><p>Hildegardisstraat 15
-            3036 NS
-            Rotterdam
-            Nederland
-        </p></a>
-        <p><a href="terms.html" target="_blank">Algemene Voorwaarden</a></p>
-        <p><a href="contact.html">Contact</a></p>
-  </div>
+    </header>
+
+    <main>
+        <section class="page-hero" style="--hero-img: url('../images/compressed/4.jpg')">
+            <div class="wrap">
+                <span class="eyebrow">Doka Rotterdam</span>
+                <h1>Professionele doka voor <em>analoge fotografie</em></h1>
+                <p class="lead">Bij Studio Rik Versteeg huur je een volledig uitgeruste donkere kamer in Rotterdam, perfect voor fotografen die hun eigen zwart-wit film willen ontwikkelen en afdrukken.</p>
+                <div class="btn-row">
+                    <a class="btn btn--primary" href="reserveren.html">Boek je sessie</a>
+                    <a class="btn btn--ghost" href="#galerij">Bekijk de ruimte</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap split">
+                <div>
+                    <span class="eyebrow">De ruimte</span>
+                    <h2 class="section-title">Alles staat voor je klaar</h2>
+                    <p>Deze professionele doka is ingericht voor zowel beginners als ervaren makers die willen werken met analoge fotografie technieken.</p>
+                    <p>De ruimte is uitgerust met een hoogwaardige Durst M605 vergroter met 75mm lens, waarmee je haarscherpe prints maakt. Alles wat je nodig hebt – van chemicaliën tot ontwikkelschalen en veilig licht – is inbegrepen in de huurprijs. Zo kun je je volledig focussen op het creatieve proces, van negatief tot eindprint.</p>
+                    <p>Wil je zelf je film ontwikkelen of hoogwaardige zwart-wit prints maken in een rustige en professionele omgeving? <a href="reserveren.html" style="color: var(--accent); font-weight: 600">Boek dan nu jouw doka sessie</a> in Rotterdam en breng je analoge werk tot leven.</p>
+                </div>
+                <div class="photo" style="aspect-ratio: 4 / 5">
+                    <img src="images/doka_img/compressed/7.jpg" alt="De donkere kamer van Doka Rotterdam" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--tight">
+            <div class="wrap grid-2">
+                <div class="card">
+                    <h3>Introductie &amp; begeleiding</h3>
+                    <p class="muted">Voorafgaand aan je sessie krijg je een korte introductie in de donkere kamer. We helpen je graag op weg met:</p>
+                    <ul class="list" style="margin-top: 14px">
+                        <li>Werken met de Durst vergroter en ingebouwde contrasten</li>
+                        <li>Uitleg over de timer</li>
+                    </ul>
+                    <p class="muted" style="margin-top: 14px">De chemicaliën zullen wij voor je klaar zetten waardoor je geen tijd verliest en meteen kan beginnen met printen. Na deze uitleg werk je zelfstandig. Tijdens je sessie is er altijd ondersteuning beschikbaar als je vragen hebt of hulp nodig hebt.</p>
+                </div>
+                <div class="card">
+                    <h3>Specificaties van de doka</h3>
+                    <ul class="list">
+                        <li>Professionele Durst M605 vergroter met instelbare grijswaarden</li>
+                        <li>75mm lens (f/4 – f/22) voor scherpe en gedetailleerde afdrukken</li>
+                        <li>Droogkast: jouw ontwikkelde film droog in ±30 minuten</li>
+                        <li>Afdrukken mogelijk tot 50 x 50 cm (op aanvraag, aangepaste setup nodig)</li>
+                        <li>Ontwikkelschalen in meerdere formaten inbegrepen</li>
+                        <li>Film retriever voor 35mm film</li>
+                        <li>Ontwikkeltanks voor 35mm en 120 film</li>
+                    </ul>
+                </div>
+                <div class="card card--accent">
+                    <h3>Inclusief</h3>
+                    <ul class="list">
+                        <li>Chemicaliën (goed voor ±10 A4 prints, exclusief teststrips)</li>
+                        <li>Basis begeleiding omtrent de apparatuur</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Exclusief</h3>
+                    <ul class="list list--minus">
+                        <li>Fotopapier (verkrijgbaar bij <a href="https://fotofilmfabriek.nl/product-categorie/fotopapier/rc-papier/foma-fomaspeed-variant/" target="_blank" rel="noopener">FotoFilmFabriek</a>)</li>
+                        <li>Alleen geschikt voor zwart-wit fotografie (geen kleurontwikkeling)</li>
+                        <li>Extra chemicaliën gebruik: €10 per 10 afdrukken</li>
+                        <li>Intensieve begeleiding omtrent tegenhouden, doordrukken, contrast en werken met Bariet papier (extra bij te boeken voor €30,00)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--tight" id="galerij">
+            <div class="wrap">
+                <span class="eyebrow">Impressie</span>
+                <h2 class="section-title">Een kijkje in de doka</h2>
+                <div class="gallery">
+                    <figure><img src="images/doka_img/compressed/7.jpg" alt="Donkere kamer met vergroter" loading="lazy"></figure>
+                    <figure><video autoplay muted loop playsinline src="images/videos/video1.webm" aria-label="Video uit de donkere kamer"></video></figure>
+                    <figure><img src="images/doka_img/compressed/2.jpg" alt="Werkplek in de doka" loading="lazy"></figure>
+                    <figure><video autoplay muted loop playsinline src="images/videos/video_10.webm" aria-label="Video uit de donkere kamer"></video></figure>
+                    <figure><img src="images/doka_img/compressed/4.jpg" alt="Ontwikkelschalen" loading="lazy"></figure>
+                    <figure><video autoplay muted loop playsinline src="images/videos/video2.webm" aria-label="Video uit de donkere kamer"></video></figure>
+                    <figure><img src="images/doka_img/compressed/3.jpg" alt="Detail van de doka" loading="lazy"></figure>
+                    <figure><video autoplay muted loop playsinline src="images/videos/video3.webm" aria-label="Video uit de donkere kamer"></video></figure>
+                </div>
+                <div class="btn-row">
+                    <a class="btn btn--primary" href="reserveren.html">Tarieven &amp; reserveren</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="cols">
+                <div>
+                    <a class="brand" href="index.html">DOKA <span>ROTTERDAM</span></a>
+                    <p style="margin-top: 12px">Professionele donkere kamer en cursussen analoge fotografie bij Studio Rik Versteeg.</p>
+                </div>
+                <div>
+                    <h4>Adres</h4>
+                    <address><a href="https://maps.app.goo.gl/UmLGHMcnTGEYaz4e9" target="_blank" rel="noopener">Hildegardisstraat 15<br>3036 NS Rotterdam<br>Nederland</a></address>
+                </div>
+                <div>
+                    <h4>Info</h4>
+                    <ul>
+                        <li><a href="mailto:info@doka-rotterdam.nl">info@doka-rotterdam.nl</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Algemene Voorwaarden</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="legal">&copy; 2026 Doka Rotterdam. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
 </body>
 </html>

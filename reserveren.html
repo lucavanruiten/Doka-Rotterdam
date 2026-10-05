@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="images/logo/logo_icon.png">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="icon" type="image/png" href="images/logo/logo_icon.png">
+    <script src="script/main.js" defer></script>
 
     <title>Donkere Kamer Boeken Rotterdam – Tarieven & Beschikbaarheid | Doka Rotterdam</title>
     <meta name="description" content="Boek een sessie in onze donkere kamer in Rotterdam. Halve dag €65, avond €75, hele dag €110. Inclusief BTW, begeleiding en chemicaliën. Direct online reserveren.">
@@ -46,7 +47,7 @@
             "name": "Halve dag (4 uur)",
             "price": "65.00",
             "priceCurrency": "EUR",
-            "description": "9:00–13:00 of 14:00–18:00, inclusief BTW en begeleiding"
+            "description": "9:00–13:00 of 13:00–17:00, inclusief BTW en begeleiding"
             },
             {
             "@type": "Offer",
@@ -60,93 +61,133 @@
             "name": "Hele dag (8 uur)",
             "price": "110.00",
             "priceCurrency": "EUR",
-            "description": "9:00–17:00 of 14:00–22:00, inclusief BTW en begeleiding"
+            "description": "9:00–17:00 of 13:00–21:00, inclusief BTW en begeleiding"
             }
         ],
         "url": "https://www.doka-rotterdam.nl/reserveren.html"
         }
     </script>
 </head>
-<body style="background-color: black;">
-    <div class="menu" id="menu_impression">
-        <a href="index.html">HOME</a>
-        <a href="impression.html">DOKA</a>
-        <a href="cursus.html">CURSUS</a>
-        <a href="reserveren.html">RESERVEREN</a>
-        <a href="team.html">TEAM</a>
-    </div>
-    <div id="box_container">
-        <div class="box">
-            <h1>
-                Halve dag (4 uur)
-            </h1><br><hr class="line"><br>
-            <h2>9:00 tot 13:00 of 13:00 tot 17:00</h2><br>
-            <p>Inclusief 21% BTW</p>
-            <p>Kosteloos annuleren tot 48 uur tevoren, binnen 48 uur wordt het volledige bedrag in rekening gebracht.</p>
-            <p>Enkel zwart-wit fotografie</p>
-            <p>Een korte introductie en uitleg vooraf is inbegrepen</p>
-            <p>Extra persoon: €30 per sessie</p>
-            <p>Extra chemicaliën: €10 per 10 afdrukken</p>
-            <p>Exclusief fotopapier <a href="https://fotofilmfabriek.nl/product-categorie/fotopapier/rc-papier/foma-fomaspeed-variant/" style="color: white;" target="_blank">(verkrijgbaar bij FotoFilmFabriek)</a></p><br>
-            <h1 style="float: left;">€65,00</h1>
-            <a href="https://rikversteeg.com/nl/donkere-kamer-te-huur-rotterdam/" class="book_btn">BOEK NU</a>
+<body>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="index.html">DOKA <span>ROTTERDAM</span></a>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+            <nav class="nav" id="nav">
+                <a href="index.html">HOME</a>
+                <a href="impression.html">DOKA</a>
+                <a href="cursus.html">CURSUS</a>
+                <a href="team.html">TEAM</a>
+                <a href="reserveren.html" aria-current="page" class="nav-cta">RESERVEREN</a>
+            </nav>
         </div>
-        <div class="box">
-            <h1>
-                Avond (4 uur)
-            </h1><br><hr class="line"><br>
-            <h2>18:00 tot 22:00</h2><br>
-            <p>Inclusief 21% BTW</p>
-            <p>Kosteloos annuleren tot 48 uur tevoren, binnen 48 uur wordt het volledige bedrag in rekening gebracht.</p>
-            <p>Enkel zwart-wit fotografie</p>
-            <p>Een korte introductie en uitleg vooraf is inbegrepen</p>
-            <p>Extra persoon: €30 per sessie</p>
-            <p>Extra chemicaliën: €10 per 10 afdrukken</p>
-            <p>Exclusief fotopapier <a href="https://fotofilmfabriek.nl/product-categorie/fotopapier/rc-papier/foma-fomaspeed-variant/" style="color: white;" target="_blank">(verkrijgbaar bij FotoFilmFabriek)</a></p><br>
-            <h1 style="float: left;">€75,00</h1>
-            <a href="https://rikversteeg.com/nl/donkere-kamer-te-huur-rotterdam/" class="book_btn">BOEK NU</a>
+    </header>
+
+    <main>
+        <section class="page-hero" style="--hero-img: url('../images/compressed/6.jpg')">
+            <div class="wrap">
+                <span class="eyebrow">Tarieven</span>
+                <h1>Reserveer de <em>doka</em></h1>
+                <p class="lead">Kies een dagdeel en boek direct. Alle prijzen zijn inclusief 21% BTW, een korte introductie en chemicaliën.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap grid-3">
+                <div class="card price-card">
+                    <h3>Halve dag</h3>
+                    <span class="time">4 uur · 9:00 tot 13:00 of 13:00 tot 17:00</span>
+                    <div class="price">€65,00</div>
+                    <div class="vat">inclusief 21% BTW</div>
+                    <a href="https://rikversteeg.com/nl/donkere-kamer-te-huur-rotterdam/" class="btn btn--ghost">Boek nu</a>
+                </div>
+                <div class="card price-card">
+                    <h3>Avond</h3>
+                    <span class="time">4 uur · 18:00 tot 22:00</span>
+                    <div class="price">€75,00</div>
+                    <div class="vat">inclusief 21% BTW</div>
+                    <a href="https://rikversteeg.com/nl/donkere-kamer-te-huur-rotterdam/" class="btn btn--ghost">Boek nu</a>
+                </div>
+                <div class="card card--accent price-card">
+                    <span class="badge">Meeste tijd</span>
+                    <h3>Hele dag</h3>
+                    <span class="time">8 uur · 9:00 tot 17:00 of 13:00 tot 21:00</span>
+                    <div class="price">€110,00</div>
+                    <div class="vat">inclusief 21% BTW</div>
+                    <a href="https://rikversteeg.com/nl/donkere-kamer-te-huur-rotterdam/" class="btn btn--primary">Boek nu</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--tight">
+            <div class="wrap grid-2">
+                <div class="card">
+                    <h3>Bij elke sessie</h3>
+                    <ul class="list">
+                        <li>Inclusief 21% BTW</li>
+                        <li>Een korte introductie en uitleg vooraf is inbegrepen</li>
+                        <li>Enkel zwart-wit fotografie</li>
+                        <li>Kosteloos annuleren tot 48 uur tevoren, binnen 48 uur wordt het volledige bedrag in rekening gebracht.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Extra's</h3>
+                    <ul class="list list--minus">
+                        <li>Extra persoon: €30 per sessie</li>
+                        <li>Extra chemicaliën: €10 per 10 afdrukken</li>
+                        <li>Exclusief fotopapier (verkrijgbaar bij <a href="https://fotofilmfabriek.nl/product-categorie/fotopapier/rc-papier/foma-fomaspeed-variant/" target="_blank" rel="noopener">FotoFilmFabriek</a>)</li>
+                    </ul>
+                    <p class="muted" style="margin-top: 14px; font-size: 0.9rem">Bekijk ook onze <a href="terms.html">algemene voorwaarden</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <span class="eyebrow">Reviews</span>
+                <h2 class="section-title">Wat anderen zeggen</h2>
+                <div class="reviews">
+                    <blockquote class="review">
+                        <p>Een geweldige doka met een geweldige gastheer! We hebben hier zelf een Doka workshop georganiseerd voor het ontwikkelen van negatieven en het afdrukken van foto’s.</p>
+                        <p>Het enige wat wij mee hoefden te nemen was fotopapier en zelf-geschoten onontwikkelde zwart-wit rolletjes, de rest, incl. chemicaliën was al in huis. We hadden een eigen instructrice mee, maar Rik was erg behulpzaam en gaf ons extra tips, thee en koffie.</p>
+                        <p>We gaan hier zeker terugkomen!</p>
+                        <footer>— Oyono Ramos</footer>
+                    </blockquote>
+                    <blockquote class="review">
+                        <p>Hele fijne ervaring: alles was schoon en goed verzorgd. De eigenaar was bijzonder vriendelijk en nam echt de tijd om te helpen en alles duidelijk uit te leggen. Je voelt je meteen welkom en op je gemak. Zeker een plek waar ik graag nog eens terugkom.</p>
+                        <footer>— D. Sadi</footer>
+                    </blockquote>
+                    <blockquote class="review">
+                        <p>Super fijne doka met een rustige en goed georganiseerde sfeer. Rik is ontzettend behulpzaam en neemt echt de tijd om al je vragen te beantwoorden, hoe klein of groot ze ook zijn. Daardoor voel je je snel op je gemak, ook als je nog niet zoveel ervaring hebt. Een plek waar je met vertrouwen kunt werken en graag terugkomt.</p>
+                        <footer>— AC Lans</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="cols">
+                <div>
+                    <a class="brand" href="index.html">DOKA <span>ROTTERDAM</span></a>
+                    <p style="margin-top: 12px">Professionele donkere kamer en cursussen analoge fotografie bij Studio Rik Versteeg.</p>
+                </div>
+                <div>
+                    <h4>Adres</h4>
+                    <address><a href="https://maps.app.goo.gl/UmLGHMcnTGEYaz4e9" target="_blank" rel="noopener">Hildegardisstraat 15<br>3036 NS Rotterdam<br>Nederland</a></address>
+                </div>
+                <div>
+                    <h4>Info</h4>
+                    <ul>
+                        <li><a href="mailto:info@doka-rotterdam.nl">info@doka-rotterdam.nl</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Algemene Voorwaarden</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="legal">&copy; 2026 Doka Rotterdam. Alle rechten voorbehouden.</p>
         </div>
-        <div class="box">
-            <h1>
-                Hele dag (8 uur)
-            </h1><br><hr class="line"><br>
-            <h2>9:00 tot 17:00 of 13:00 tot 21:00</h2><br>
-            <p>Inclusief 21% BTW</p>
-            <p>Kosteloos annuleren tot 48 uur tevoren, binnen 48 uur wordt het volledige bedrag in rekening gebracht.</p>
-            <p>Enkel zwart-wit fotografie</p>
-            <p>Een korte introductie en uitleg vooraf is inbegrepen</p>
-            <p>Extra persoon: €30 per sessie</p>
-            <p>Extra chemicaliën: €10 per 10 afdrukken</p>
-            <p>Exclusief fotopapier <a href="https://fotofilmfabriek.nl/product-categorie/fotopapier/rc-papier/foma-fomaspeed-variant/" style="color: white;" target="_blank">(verkrijgbaar bij FotoFilmFabriek)</a></p><br>
-            <h1 style="float: left;">€110,00</h1>
-            <a href="https://rikversteeg.com/nl/donkere-kamer-te-huur-rotterdam/" class="book_btn">BOEK NU</a>
-        </div>
-    </div>
-    <div id="reviews">
-        <div class="review">
-            <p>Een geweldige doka met een geweldige gastheer! We hebben hier zelf een Doka workshop georganiseerd voor het ontwikkelen van negatieven en het afdrukken van foto’s.<br><br>
-Het enige wat wij mee hoefden te nemen was fotopapier en zelf-geschoten onontwikkelde zwart-wit rolletjes, de rest, incl. chemicaliën was al in huis. We hadden een eigen instructrice mee, maar Rik was erg behulpzaam en gaf ons extra tips, thee en koffie.<br><br>
-We gaan hier zeker terugkomen!<br><br>
-— Oyono Ramos</p>
-        </div>
-        <div class="review">
-            <p>Hele fijne ervaring: alles was schoon en goed verzorgd. De eigenaar was bijzonder vriendelijk en nam echt de tijd om te helpen en alles duidelijk uit te leggen. Je voelt je meteen welkom en op je gemak. Zeker een plek waar ik graag nog eens terugkom.<br><br>
-— D. Sadi</p>
-        </div>
-        <div class="review">
-            <p>Super fijne doka met een rustige en goed georganiseerde sfeer. Rik is ontzettend behulpzaam en neemt echt de tijd om al je vragen te beantwoorden, hoe klein of groot ze ook zijn. Daardoor voel je je snel op je gemak, ook als je nog niet zoveel ervaring hebt. Een plek waar je met vertrouwen kunt werken en graag terugkomt.<br><br>
-— AC Lans</p>
-        </div>
-    </div>
-  <div id="footer">
-    <p>&copy; 2026 Doka Rotterdam. Alle rechten voorbehouden.</p>
-    <a href="https://maps.app.goo.gl/UmLGHMcnTGEYaz4e9" target="_blank"><p>Hildegardisstraat 15
-        3036 NS
-        Rotterdam
-        Nederland
-    </p></a>
-    <p><a href="terms.html" target="_blank">Algemene Voorwaarden</a></p>
-    <p><a href="contact.html">Contact</a></p>
-  </div>
+    </footer>
 </body>
 </html>
