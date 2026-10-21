@@ -26,7 +26,7 @@ Preview locally: `python3 -m http.server 8123` from the repo root (also configur
 
 ## Shared markup (copy-pasted, no includes)
 
-Every page has the same `<header class="site-header">` nav and `<footer class="site-footer">`. **When changing nav links or footer content, update all 7 HTML files.** The current page's nav link gets `aria-current="page"`. The home page uses `site-header site-header--overlay` (transparent over the hero).
+Every page has the same `<header class="site-header">` nav and `<footer class="site-footer">`. **When changing nav links or footer content, update all 7 HTML files.** The current page's nav link gets `aria-current="page"`. The footer has four columns: about, address, opening hours (Ma t/m vr 09:00 – 17:00, za en zo op aanvraag; also `openingHours` in the index.html JSON-LD), info links. The home page uses `site-header site-header--overlay` (transparent over the hero).
 
 Each page's `<head>` has: Sora from Google Fonts, `style/main.css`, `script/main.js` (deferred), favicon, SEO title/description/keywords, canonical URL, Open Graph tags, and most have JSON-LD structured data. Keep these when editing.
 
@@ -50,7 +50,7 @@ Each page's `<head>` has: Sora from Google Fonts, `style/main.css`, `script/main
 ### Changing prices
 Prices appear in several places — keep them in sync:
 - `reserveren.html`: the price cards **and** the JSON-LD `offers` **and** the meta description / og:description
-- `index.html`: "Vanaf €65 per dagdeel" feature card
+- `index.html`: "Vanaf €49,50 per dagdeel" feature card
 - `terms.html` section 7 (see known issues)
 
 ### Images
@@ -59,7 +59,7 @@ Originals from the camera are huge (up to 15 MB). Always add a web-sized copy be
 
 ## Known content inconsistencies (ask the owner before "fixing")
 
-- `terms.html` §7 lists €55 / €65 / €100, while `reserveren.html` shows €65 / €75 / €110.
+- `terms.html` §7 lists €55 / €65 / €100, while `reserveren.html` shows €49,50 (halve dag) / €55 (avond) / €95 (hele dag).
 - Max print size: `impression.html` says 50×50 cm, `terms.html` says 60×60 cm.
 
 ## External links

@@ -292,6 +292,17 @@ p + p { margin-top: 1em; }
 
 .card h3 { font-size: 1.2rem; margin-bottom: 14px; }
 
+.card .card-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 22px 0 10px;
+}
+
+.card h3 + .card-label { margin-top: 0; }
+
 .card--accent { background: linear-gradient(160deg, rgba(255, 0, 149, 0.16), var(--surface) 60%); border-color: rgba(255, 0, 149, 0.35); }
 
 .list { list-style: none; }
@@ -600,7 +611,7 @@ p + p { margin-top: 1em; }
 
 .site-footer .cols {
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
     gap: 32px;
 }
 
@@ -619,6 +630,7 @@ p + p { margin-top: 1em; }
 /* ---------- Responsive ---------- */
 
 @media (max-width: 960px) {
+    .site-footer .cols { grid-template-columns: 1fr 1fr; }
     .grid-3 { grid-template-columns: 1fr; }
     .split { grid-template-columns: 1fr; }
 }
