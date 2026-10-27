@@ -1,6 +1,6 @@
 # Doka Rotterdam
 
-Website for **Doka Rotterdam**, a professional black-and-white darkroom (doka) for hire at Studio Rik Versteeg, Hildegardisstraat 15, 3036 NS Rotterdam. It also sells a 4-hour darkroom printing course, "Cursus printen in de doka" (participants bring their own b/w negatives → contact sheet, test strips, final print; max. 2–3 people; NL/EN). Live at https://www.doka-rotterdam.nl (see `CNAME`; hosted as a static site, e.g. GitHub Pages).
+Website for **Doka Rotterdam**, a professional black-and-white darkroom (doka) for hire at Studio Rik Versteeg, Hildegardisstraat 15, 3036 NS Rotterdam. It also runs two courses: the full-day course "Van camera tot donkere kamer" (Hasselblad portraits → film development → prints, lunch included, max. 4 people, Sundays 09:30–16:00) and the short 4-hour course "Printen in de doka" (participants bring their own b/w negatives; max. 2–3 people; 09:30–13:00; NL/EN). Live at https://www.doka-rotterdam.nl (see `CNAME`; hosted as a static site, e.g. GitHub Pages).
 
 All visitor-facing copy is **Dutch** (`lang="nl-NL"`). Keep new text in Dutch and match the existing tone (warm, direct, "je/jij").
 
@@ -11,7 +11,7 @@ Plain static HTML + one CSS file + one small JS file. No build step, no framewor
 ```
 index.html        Home: full-screen sliding photo hero + logo, intro cards
 impression.html   "DOKA" page: the darkroom, specs, inclusief/exclusief, photo/video gallery
-cursus.html       "CURSUS" page: printing course info, schedule, course dates, sign-up
+cursus.html       "CURSUS" page: overview of both courses, then #dagcursus (full day, with the date list) and #printcursus (short course)
 reserveren.html   Prices (3 sessions), conditions, reviews, booking links
 team.html         Rik Versteeg & Luca van Ruiten
 contact.html      E-mail + address
@@ -45,7 +45,11 @@ Each page's `<head>` has: Sora from Google Fonts, `style/main.css`, `script/main
 2. Add a matching `CourseInstance` in the JSON-LD `hasCourseInstance` array in `<head>` (CET `+01:00` in winter, CEST `+02:00` in summer).
 3. Update the static fallback text of `<dd data-next-course>` to the next date (shown if JS is off).
 
-`script/main.js` automatically hides dates that have passed, badges the first upcoming one as "Eerstvolgende", and fills the "Eerstvolgende cursus" field. Old dates can still be deleted for tidiness. Courses are on Sundays, 09:30–13:00 (JSON-LD `endDate` uses T13:00). Sign-up goes through the Eventbrite link on the "Meld je aan" button.
+`script/main.js` automatically hides dates that have passed, badges the first upcoming one as "Eerstvolgende", and fills the "Eerstvolgende cursus" field. Old dates can still be deleted for tidiness. The date list belongs to the full-day course (Sundays, 09:30–16:00; JSON-LD `endDate` T16:00). The short course has no date list; its dates live on Eventbrite.
+
+Each course has its own Eventbrite link, used on two "Meld je aan" buttons each (overview card + the course's practical-info card):
+- Full-day: `…tickets-2002797812170?aff=ebdssbdestsearch`
+- Short course: `https://www.eventbrite.nl/e/2003963549923?aff=oddtdtcreator` Sign-up goes through the Eventbrite link on the "Meld je aan" button.
 
 ### Changing prices
 Prices appear in several places — keep them in sync:
@@ -65,7 +69,7 @@ Originals from the camera are huge (up to 15 MB). Always add a web-sized copy be
 ## External links
 
 - Booking: https://rikversteeg.com/nl/donkere-kamer-te-huur-rotterdam/
-- Course sign-up: Eventbrite (link on cursus.html)
+- Course sign-up: Eventbrite (two links on cursus.html, see above)
 - Discount scheme: https://werktuigppo.nl/spelregels/
 - Photo paper: FotoFilmFabriek
 - Maps: https://maps.app.goo.gl/UmLGHMcnTGEYaz4e9
