@@ -1,6 +1,6 @@
 # Doka Rotterdam
 
-Website for **Doka Rotterdam**, a professional black-and-white darkroom (doka) for hire at Studio Rik Versteeg, Hildegardisstraat 15, 3036 NS Rotterdam. It also sells a one-day analogue photography course (camera → film development → darkroom prints). Live at https://www.doka-rotterdam.nl (see `CNAME`; hosted as a static site, e.g. GitHub Pages).
+Website for **Doka Rotterdam**, a professional black-and-white darkroom (doka) for hire at Studio Rik Versteeg, Hildegardisstraat 15, 3036 NS Rotterdam. It also sells a 4-hour darkroom printing course, "Cursus printen in de doka" (participants bring their own b/w negatives → contact sheet, test strips, final print; max. 2–3 people; NL/EN). Live at https://www.doka-rotterdam.nl (see `CNAME`; hosted as a static site, e.g. GitHub Pages).
 
 All visitor-facing copy is **Dutch** (`lang="nl-NL"`). Keep new text in Dutch and match the existing tone (warm, direct, "je/jij").
 
@@ -11,14 +11,14 @@ Plain static HTML + one CSS file + one small JS file. No build step, no framewor
 ```
 index.html        Home: full-screen sliding photo hero + logo, intro cards
 impression.html   "DOKA" page: the darkroom, specs, inclusief/exclusief, photo/video gallery
-cursus.html       "CURSUS" page: course info, day schedule, course dates, sign-up
+cursus.html       "CURSUS" page: printing course info, schedule, course dates, sign-up
 reserveren.html   Prices (3 sessions), conditions, reviews, booking links
 team.html         Rik Versteeg & Luca van Ruiten
 contact.html      E-mail + address
 terms.html        Algemene voorwaarden (terms)
 style/main.css    All styling (design tokens in :root)
 script/main.js    Mobile nav toggle + automatic course-date handling
-images/           compressed/ (home slider), doka_img/compressed/, cursus_photos/web/,
+images/           compressed/web/ (home slider + page heroes; compressed/ itself holds 50 MP originals, never reference those), doka_img/compressed/, cursus_photos/web/,
                   team/web/, logo/, videos/ (.webm)
 ```
 
@@ -45,7 +45,7 @@ Each page's `<head>` has: Sora from Google Fonts, `style/main.css`, `script/main
 2. Add a matching `CourseInstance` in the JSON-LD `hasCourseInstance` array in `<head>` (CET `+01:00` in winter, CEST `+02:00` in summer).
 3. Update the static fallback text of `<dd data-next-course>` to the next date (shown if JS is off).
 
-`script/main.js` automatically hides dates that have passed, badges the first upcoming one as "Eerstvolgende", and fills the "Eerstvolgende cursus" field. Old dates can still be deleted for tidiness. Courses are on Sundays, 09:30–16:00. Sign-up goes through the Eventbrite link on the "Meld je aan" button.
+`script/main.js` automatically hides dates that have passed, badges the first upcoming one as "Eerstvolgende", and fills the "Eerstvolgende cursus" field. Old dates can still be deleted for tidiness. Courses are on Sundays, 09:30–13:00 (JSON-LD `endDate` uses T13:00). Sign-up goes through the Eventbrite link on the "Meld je aan" button.
 
 ### Changing prices
 Prices appear in several places — keep them in sync:

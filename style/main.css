@@ -354,10 +354,16 @@ p + p { margin-top: 1em; }
     width: max-content;
     height: 100%;
     animation: scroll 80s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
+/* Explicit width, not just flex-basis: Firefox ignores flex-basis when
+   sizing a max-content flex container, which left the track 0px wide
+   (so translateX(-50%) moved nothing). */
 .track .image {
-    flex: 0 0 100vw;
+    flex: none;
+    width: 100vw;
     height: 100%;
     background-size: cover;
     background-position: center;
@@ -420,8 +426,8 @@ p + p { margin-top: 1em; }
 .feature .arrow { margin-top: 20px; font-weight: 600; color: var(--accent); }
 
 @keyframes scroll {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(-50%, 0, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -664,6 +670,7 @@ p + p { margin-top: 1em; }
 
 @media (max-width: 700px) {
     body { font-size: 16px; }
+    .home-hero__content p { display: none; }
     .grid-2 { grid-template-columns: 1fr; }
     .timeline li { grid-template-columns: 1fr; gap: 6px; }
     .site-footer .cols { grid-template-columns: 1fr; gap: 28px; }
